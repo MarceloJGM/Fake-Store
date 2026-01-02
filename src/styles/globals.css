@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+    --color-primary: #FF8B5C;
+    --color-primary-light: #FFB495;
+    --color-primary-dark: #FF6B35;
+    --color-primary-soft: #3A261F;
+
+    --color-bg-primary: #121212;
+    --color-bg-secondary: #1E1E1E;
+    --color-bg-tertiary: #2D2D2D;
+
+    --color-text-primary: #E8E8E8;
+    --color-text-secondary: #B0B0B0;
+    --color-text-tertiary: #8A8A8A;
+
+    --color-border: #3D3D3D;
+    --color-border-hover: #5A5A5A;
+
+    --color-success: #4CAF50;
+    --color-warning: #FFB74D;
+    --color-error: #F44336;
+    --color-info: #29B6F6;
+
+    --text-h1-responsive: clamp(1.50rem, 7dvw, 2rem);
+    --text-h2-responsive: clamp(1.25rem, 6dvw, 1.75rem);
+    --text-h3-responsive: clamp(1rem, 5dvw, 1.5rem);
+}

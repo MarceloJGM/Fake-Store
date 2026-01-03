@@ -47,7 +47,7 @@ export const useProducts = (
             const newFilteredProducts = products.filter(
                 (product) =>
                     product.title.toLowerCase().includes(textToFilter.toLowerCase()) &&
-                    (filters.price === 0 || product.price >= filters.price) &&
+                    (filters.price === 0 || product.price <= filters.price) &&
                     (filters.category === "" || product.category === filters.category),
             );
 

@@ -111,7 +111,7 @@ export const ProductCard = ({
                     )}
                     {cartSection ? (
                         <button
-                            className="flex items-center gap-1 p-2 rounded-full cursor-pointer truncate bg-warning "
+                            className="flex items-center hover:animate-pulse gap-1 p-2 rounded-full cursor-pointer truncate bg-warning"
                             type="button"
                             onClick={handleRemoveFromCart}
                         >
@@ -129,7 +129,7 @@ export const ProductCard = ({
                         </button>
                     )}
                     <Link
-                        className="flex items-center gap-1 bg-info truncate p-2 rounded-full"
+                        className="flex items-center hover:animate-pulse gap-1 bg-info truncate p-2 rounded-full"
                         href={`/product/${id}`}
                     >
                         <IconCircleChevronRight />

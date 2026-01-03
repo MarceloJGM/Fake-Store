@@ -1,9 +1,9 @@
 import { IconBuildingStore } from "@tabler/icons-react";
-import { Link, useRoute } from "wouter";
+import { Link } from "wouter";
 import { ShoppingCart } from "./ShoppingCart";
 
 export const Header = () => {
-    const [match] = useRoute("/search");
+    const navLinkStyles = "hover:opacity-85 transition-opacity";
     return (
         <header className="flex flex-wrap justify-evenly items-center gap-x-8 p-2 bg-bg-primary text-text-primary sticky top-0 z-10 border-b border-white/20">
             <section className="text-h2-responsive">
@@ -14,7 +14,9 @@ export const Header = () => {
             </section>
             <nav className="flex items-center gap-2">
                 <Link
-                    className={`hover:border-b hover:border-primary-dark transition-all ${match && "border-b border-primary-dark"}`}
+                    className={(active) =>
+                        active ? navLinkStyles.concat(" text-primary-light") : navLinkStyles
+                    }
                     href="/search"
                 >
                     Products

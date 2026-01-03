@@ -65,7 +65,9 @@ export const ProductCard = ({
                     alt="Producto"
                     loading="lazy"
                 />
-                <p className="absolute bottom-0 right-0 border-info border p-0.5 bg-info text-text-primary first-letter:uppercase">{category}</p>
+                <p className="absolute bottom-0 left-0 rounded-bl-md p-0.5 bg-info text-text-primary first-letter:uppercase">
+                    {category}
+                </p>
             </figure>
             <div className="flex flex-col justify-around overflow-hidden w-full h-full gap-4 p-2">
                 <section className="flex flex-col gap-1">
@@ -109,21 +111,21 @@ export const ProductCard = ({
                     )}
                     {cartSection ? (
                         <button
-                            className="flex items-center gap-1 p-2 rounded-full cursor-pointer truncate bg-warning"
+                            className="flex items-center gap-1 p-2 rounded-full cursor-pointer truncate bg-warning "
                             type="button"
                             onClick={handleRemoveFromCart}
                         >
                             <IconShoppingCartCancel />
-                            Remove From Cart
+                            Remove
                         </button>
                     ) : (
                         <button
-                            className="flex items-center gap-1 p-2 rounded-full cursor-pointer truncate bg-success"
+                            className="flex items-center hover:animate-pulse gap-1 p-2 rounded-full cursor-pointer truncate bg-success"
                             type="button"
                             onClick={handleAddToCart}
                         >
                             <IconShoppingCartPlus />
-                            Add To Cart
+                            Add
                         </button>
                     )}
                     <Link

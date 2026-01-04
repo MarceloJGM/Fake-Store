@@ -58,7 +58,10 @@ export const ProductCard = ({
             id={id.toString()}
             className="flex bg-bg-primary/80 w-full max-w-300 min-h-48 gap-2 rounded-md border border-border/80 shadow-xs shadow-border/60"
         >
-            <figure className="relative flex items-center w-[50%] max-w-50 bg-text-primary rounded-l-md">
+            <Link
+                href={`/product/${id}`}
+                className="relative flex items-center w-[50%] max-w-50 bg-text-primary rounded-l-md"
+            >
                 <img
                     className="w-full h-full aspect-square object-contain p-2 mx-auto"
                     src={image}
@@ -68,7 +71,7 @@ export const ProductCard = ({
                 <p className="absolute bottom-0 left-0 rounded-bl-md p-0.5 bg-info text-text-primary first-letter:uppercase">
                     {category}
                 </p>
-            </figure>
+            </Link>
             <div className="flex flex-col justify-around overflow-hidden w-full h-full gap-4 p-2">
                 <section className="flex flex-col gap-1">
                     <h3 className="text-h3-responsive text-text-primary truncate">

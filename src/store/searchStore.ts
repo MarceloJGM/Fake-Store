@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { subscribeWithSelector } from "zustand/middleware";
 import type { Filters } from "@/interfaces/index.ts";
 
 interface searchStore {
@@ -9,18 +8,16 @@ interface searchStore {
     setFilters: (newFilters: Filters) => void;
 }
 
-export const useSearchStore = create<searchStore>()(
-    subscribeWithSelector((set) => ({
-        textToFilter: "",
-        filters: {
-            category: "",
-            price: 0,
-        },
-        setTextToFilter: (newTextToFilter: string) =>
-            set({ textToFilter: newTextToFilter }),
-        setFilters: (newFilters: Filters) =>
-            set({
-                filters: { category: newFilters.category, price: newFilters.price },
-            }),
-    })),
-);
+export const useSearchStore = create<searchStore>()((set) => ({
+    textToFilter: "",
+    filters: {
+        category: "",
+        price: 8,
+    },
+    setTextToFilter: (newTextToFilter: string) =>
+        set({ textToFilter: newTextToFilter }),
+    setFilters: (newFilters: Filters) =>
+        set({
+            filters: { category: newFilters.category, price: newFilters.price },
+        }),
+}));
